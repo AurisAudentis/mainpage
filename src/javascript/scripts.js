@@ -11,8 +11,8 @@ $('#icon').on('click', () => {
      moveTo("0");
 });
 
-$('.navbar').click(function() {
-    moveTo($(this).attr("linkdest"));
+$('#linkAboutMe').click(function(){
+    moveTo("1")
 });
 
 $('#linkProj').click(function(){
@@ -41,6 +41,8 @@ function moveTo(page){
 function moveUp(){
     $("#header").fadeOut(100);
     $("#linkProj").fadeOut(100);
+    $("#linkAboutMe").fadeOut(100);
+
     setTimeout(() => {
         $("#navmain").addClass("movenavUp");
         $("#BGcolor").addClass("moveBgUp");
@@ -58,7 +60,7 @@ function moveDown(){
     setTimeout(() => {
         $("#linkProj").fadeIn(0);
         $("#header").fadeIn(0);
+        $("#linkAboutMe").fadeIn(0 );
     }, 200);
-
 }
 });
