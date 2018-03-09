@@ -11,14 +11,30 @@ $('#icon').on('click', () => {
      moveTo("0");
 });
 
-$('#linkAboutMe').click(function(){
+$('.linkAboutMe').click(function(){
     moveTo("1")
 });
 
-$('#linkProj').click(function(){
+$('.linkProj').click(function(){
     moveTo("2")
 });
+$('.projDiv').on('click', function(){
 
+    expand(this);
+    }
+);
+
+
+
+
+
+
+function expand(div){
+    if($(div).hasClass("textVisible")){
+        $(div).removeClass("textVisible")
+    } else {
+    $(div).addClass("textVisible");
+}}
 
 //This delegates the tasks that have to happen.
 function moveTo(page){

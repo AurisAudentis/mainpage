@@ -15,7 +15,6 @@ html,body
 	width:100%;
 	height: 100%;
 	margin: 0;
-	background-image: url("../img/background_scaled_darkened.jpg");
 	z-index: -1;
 	top: 0;
 	left:0;
@@ -63,7 +62,7 @@ h3{
 	font-family: Lobster;
 	font-size: 2vw;
 }
-#linkProj{
+#mainLinkProj{
     position:absolute;
     color: #E8E8E8;
     font-size: 2.5vw;
@@ -71,7 +70,7 @@ h3{
     top: 60vh;
     left: 80vw;
 }
-#linkAboutMe{
+#mainLinkAboutMe{
 	position:absolute;
 	color: #E8E8E8;
 	font-size: 2.5vw;
@@ -132,5 +131,26 @@ nav li:nth-child(2){
 	left: 16%;
 }
 .project{
-	width:15%;
+	width:12vw;
+}
+#aboutmeLinkProj{
+	text-decoration: underline;
+}
+#contact{
+	margin-top: 5%;
+}
+.projDiv{
+	background-color: #303030;
+	width: 12vw;
+	border-radius:30px;
+	border: solid;
+	transition-duration: 0.7s;
+}
+#nodeProjDiv{
+    position:absolute;
+    top: 0;
+    left:15vw;
+}
+.textVisible{
+	width: 40vw!important;
 }

@@ -9,7 +9,6 @@
 <body>
 	<div id="BGcolor">
         <img id="BGimg" src="src/img/background_scaled_darkened.jpg" alt="">
-       <!-- <img id="BGImage" src="src/img/background_scaled_darkened.jpg"/> -->
             <div id="header">
                 <h1 id="head"><a href="#">Maxiem Geldhof</a></h1>
         <h3 id="subhead">Web development | Computer Science</h3>
@@ -17,8 +16,8 @@
                 <nav>
                     <a href="#"><img src="src/img/icon.svg" id="icon" class="hidden"></a>
                 </nav>
-            <h4 id="linkProj"><a href="#">Projects</a></h4>
-            <h4 id="linkAboutMe"><a href="#">About me</a></h4>
+            <h4 class="linkProj" id="mainLinkProj"><a href="#">Projects</a></h4>
+            <h4 class="linkAboutMe" id="mainLinkAboutMe"><a href="#">About me</a></h4>
     </div>
 
 
@@ -26,12 +25,21 @@
 		<h3>About me</h3>
 		<p>Hello, and welcome to this site! My name is Maxiem Geldhof and I am currently a student in Informatics, at Ghent university. I have a great passion for all things concerning computers, especially software development.
         I'm very interested in learning more about what's to know in the wide world of Informatics.</p>
+
+        <p> Right now, I'm focussing mostly on backend web development, so I can deploy server-side software for
+            mobile apps and create infrastructure for internet-of-things projects. </p>
+
+        <p> Be sure to check out <a class="linkProj" id="aboutmeLinkProj" href="#">my projects page</a> for more info on these.</p>
+        <p id="contact">You can contact me at maxiemgeldhof@msn.com, or you can call me at the number 0496/38 00 20.</p>
 	</div>
 
 
     <div id="projects" class="content hidden">
-        <img class="project" id="nodeProj" src="src/img/nodemcu.jpeg">
-    </div>
+        <div class="projDiv" id="nodeProjDiv">
+        <img class="project" id="nodeProj" src="src/img/nodemcu.png">
+            <p class="hidden">This is a project aimed at the integration of architecture and the digital world. It allows you to use microprocessor chips integrated into a chip to </p>
+        </div>
+        </div>
 
 
 
