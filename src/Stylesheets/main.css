@@ -114,8 +114,10 @@ nav li:nth-child(2){
     margin-left: 45vw;
 }
 
+
+
 .hidden{
-	display:none;
+display:none;
 }
 .content {
     position: absolute;
@@ -142,9 +144,12 @@ nav li:nth-child(2){
 .projDiv{
 	background-color: #303030;
 	width: 12vw;
+    height: 12vw;
 	border-radius:30px;
 	border: solid;
 	transition-duration: 0.7s;
+    color:white;
+    display:flex;
 }
 #nodeProjDiv{
     position:absolute;
@@ -153,4 +158,7 @@ nav li:nth-child(2){
 }
 .textVisible{
 	width: 40vw!important;
+}
+p a {
+    text-decoration:underline;
 }

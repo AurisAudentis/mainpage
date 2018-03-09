@@ -31,10 +31,13 @@ $('.projDiv').on('click', function(){
 
 function expand(div){
     if($(div).hasClass("textVisible")){
-        $(div).removeClass("textVisible")
+        $(div).removeClass("textVisible");
+        $(div).find("p").addClass("hidden").css("display","none");
     } else {
     $(div).addClass("textVisible");
-}}
+    setTimeout(() => {$(div).find("p").removeClass("hidden").css("display", "inline-block");
+    }, 700);
+    }}
 
 //This delegates the tasks that have to happen.
 function moveTo(page){
