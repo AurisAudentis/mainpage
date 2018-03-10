@@ -142,13 +142,12 @@ display:none;
 	margin-top: 5%;
 }
 .projDiv{
-	background-color: #303030;
+	background-color: inherit;
 	width: 12vw;
     height: 12vw;
 	border-radius:30px;
-	border: solid;
 	transition-duration: 0.7s;
-    color:white;
+    color:black;
     display:flex;
 }
 #nodeProjDiv{
@@ -161,4 +160,10 @@ display:none;
 }
 p a {
     text-decoration:underline;
+}
+#projectHead{
+	position:absolute;
+	left:30vw;
+	top:-15vh;
+
 }
