@@ -36,7 +36,7 @@ function expand(div){
     } else {
     $(div).addClass("textVisible");
     setTimeout(() => {$(div).find("p").removeClass("hidden").css("display", "inline-block");
-    }, 700);
+    }, 300);
     }}
 
 //This delegates the tasks that have to happen.
