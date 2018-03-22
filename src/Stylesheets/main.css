@@ -132,6 +132,7 @@ display:none;
 }
 .project{
 	width:12vw;
+	margin-right: 10px;
 }
 #aboutmeLinkProj{
 	text-decoration: underline;
@@ -151,11 +152,11 @@ display:none;
 }
 #nodeProjDiv{
     position:absolute;
-    top: 0;
-    left:15vw;
+    left:27.5vw;
 }
 .textVisible{
 	width: 40vw!important;
+	left: 13.5vw!important;
 }
 p a {
     text-decoration:underline;
@@ -164,5 +165,9 @@ p a {
 	position:absolute;
 	left:30vw;
 	top:-15vh;
-
+}
+#classProjDiv{
+	position:absolute;
+	top: 30vh;
+	left:27.5vw;
 }
