@@ -1,85 +1,52 @@
 $( ()  => {
-let current="0";
-let pages = ["head","aboutme","projects","resume", "contact"];
+    const pages = {
+        "head": new Mainpage("head"),
+        "aboutme": new Page("aboutme", "#aboutme"),
+        "projects": new Page("projects", "#projects"),
+        "resume": new Page("resume"),
+        "contact": new Page("contact")
+    };
+    let current = pages.head;
 
-//This handles the click events.
-$('#head').on('click', () => {
-    moveTo("1");
-});
+    //This handles the click event handlers.
+    $('#head').on('click', () => {
+        moveTo(pages.aboutme);
+    });
 
-$('#icon').on('click', () => {
-     moveTo("0");
-});
+    $('#icon').on('click', () => {
+        moveTo(pages.head);
+    });
 
-$('.linkAboutMe').click(function(){
-    moveTo("1")
-});
+    $('.linkAboutMe').click(() => {
+        console.log("moving to aboutme");
+        moveTo(pages.aboutme);
+    });
 
-$('.linkProj').click(function(){
-    moveTo("2")
-});
-$('.projDiv').on('click', function(){
+    $('.linkProj').click(() => {
+        console.log("moving to projects");
+        moveTo(pages.projects);
+    });
 
-    expand(this);
+    $('.projDiv').on('click', function () {
+        expand(this);
+    });
+
+
+    function expand(div) {
+        if ($(div).hasClass("textVisible")) {
+            $(div).removeClass("textVisible");
+            $(div).find("p").addClass("hidden").css("display", "none");
+        } else {
+            $(div).addClass("textVisible");
+            setTimeout(() => {
+                $(div).find("p").removeClass("hidden").css("display", "inline-block");
+            }, 300);
+        }
     }
-);
 
-
-
-
-
-
-function expand(div){
-    if($(div).hasClass("textVisible")){
-        $(div).removeClass("textVisible");
-        $(div).find("p").addClass("hidden").css("display","none");
-    } else {
-    $(div).addClass("textVisible");
-    setTimeout(() => {$(div).find("p").removeClass("hidden").css("display", "inline-block");
-    }, 300);
-    }}
-
-//This delegates the tasks that have to happen.
-function moveTo(page){
-    if (current == "0"){
-        moveUp();
-        $('#' + pages[page]).fadeIn(500);
-    } else if (page == "0") {
-        $("#" + pages[current]).fadeOut(500);
-        moveDown();
-    } else {
-        $("#" + pages[current]).fadeOut(500);
-        $("#" + pages[page]).fadeIn(500);
+    function moveTo(page) {
+        current.moveOut();
+        page.moveIn();
+        current = page;
     }
-    current = page;
-}
-
-
-
-//this moves the bar up, so the page looks as it does on load.
-function moveUp(){
-    $("#header").fadeOut(100);
-    $("#linkProj").fadeOut(100);
-    $("#linkAboutMe").fadeOut(100);
-
-    setTimeout(() => {
-        $("#navmain").addClass("movenavUp");
-        $("#BGcolor").addClass("moveBgUp");
-    }, 0);
-    setTimeout(() => {
-        $("#icon").fadeIn(500);
-    }, 500);
-}
-
-//this moves the bar down, so the content classes can pop up as needed.
-function moveDown(){
-    $("#icon").fadeOut(300);
-    $("#navmain").removeClass("movenavUp");
-    $("#BGcolor").removeClass("moveBgUp");
-    setTimeout(() => {
-        $("#linkProj").fadeIn(0);
-        $("#header").fadeIn(0);
-        $("#linkAboutMe").fadeIn(0 );
-    }, 200);
-}
 });
