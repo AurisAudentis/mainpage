@@ -20,8 +20,8 @@ class Page {
 class Mainpage extends Page {
     moveOut() {
         $("#header").fadeOut(100);
-        $("#linkProj").fadeOut(100);
-        $("#linkAboutMe").fadeOut(100);
+        $("#mainLinkProj").addClass("hidden").fadeOut(100);
+        $("#mainLinkAboutMe").fadeOut(100);
 
         setTimeout(() => {
             $("#navmain").addClass("movenavUp");
